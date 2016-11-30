@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CapaDominio.Entidades
+{
+    public class entMedico : entEmpleado
+    {
+        public int idMedico { get; set; }
+        public entEmpleado Empleado { get; set; }
+        public entEspecialidad Especialidad { get; set; } 
+        List<entCita> ListaCitas { get; set; }
+        List<entHorarioAtencion> ListaHorarioAtencion { get; set; }
+
+        public entMedico()
+        {
+        }
+
+        // metodo que busca en todos los horarios, si se encuentra una cita, de ser verdad no lo guardo, caso contrario se alamacena en horarios disponibles
+        public List<entHorarioAtencion> HorariosDisponibles(List<entHorarioAtencion> ListaHorarioAtencion, List<entCita> ListCitas)
+        {
+            this.ListaHorarioAtencion = new List<entHorarioAtencion>();
+            //this.ListaCitas = ListaCitas;
+            bool esta = false;
+            foreach (entHorarioAtencion ha in ListaHorarioAtencion)
+            {
+
+                foreach (entCita c in ListCitas)
+                {
+                    if (c.hora == ha.Hora.hora && c.Medico.idMedico == ha.Medico.idMedico)
+                    {
+                        esta = true;
+                        break;
+                    }
+                }
+                if (esta == false)
+                {
+                    this.ListaHorarioAtencion.Add(ha);
+                }
+                else
+                {
+                    esta = false;
+                }
+            }
+            return this.ListaHorarioAtencion;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaPersistencia\bin\Release\CapaPersistencia.dll
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaPersistencia\bin\Release\CapaPersistencia.pdb
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaPersistencia\bin\Release\CapaDominio.dll
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaPersistencia\bin\Release\CapaDominio.pdb
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaPersistencia\obj\Release\CapaPersistencia.csprojResolveAssemblyReference.cache
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaPersistencia\obj\Release\CapaPersistencia.dll
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaPersistencia\obj\Release\CapaPersistencia.pdb

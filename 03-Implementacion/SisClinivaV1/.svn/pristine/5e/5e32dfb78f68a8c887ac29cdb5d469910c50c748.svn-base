@@ -1,0 +1,92 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using CapaDominio.Entidades;
+using CapaAplicacion;
+
+namespace CapaPresentacion
+{
+    public partial class frmAtencionPaciente : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!Page.IsPostBack)
+            {
+                CargarDatos();
+            }
+        }
+
+        protected void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (txtDiagnostico.Text != string.Empty)
+            {
+
+                entPaciente objPaciente = (entPaciente)Session["paciente"];
+                objPaciente = GetPaciente(objPaciente.apPaterno, objPaciente.apMaterno);
+
+                entHistoriaClinica objHistoriaClinica = new entHistoriaClinica();
+                objHistoriaClinica.Paciente = objPaciente;
+
+                GestionarHistoriaClinicaServicio gestionarHistoriaClinicaServicio = new GestionarHistoriaClinicaServicio();
+                int filas = gestionarHistoriaClinicaServicio.Registrar(objHistoriaClinica);
+                bool resultado = false;
+                if (filas == 1 || filas == -1)
+                {
+                    resultado = true;
+                }
+                else if (filas == -2)
+                {
+                    Response.Write("<script>alert('ERROR: No se pudo registrar el Historial Clínico')</script>");
+                }
+
+                objHistoriaClinica = gestionarHistoriaClinicaServicio.BuscarPorPaciente(objPaciente.idPaciente);
+                GestionarDiagnosticoServicio gestionarDiagnosticoServicio = new GestionarDiagnosticoServicio();
+                entDiagnostico objDiagnostico = GetDiagnostico(txtDiagnostico.Text, objHistoriaClinica);
+                int filas2 = gestionarDiagnosticoServicio.Registrar(objDiagnostico);
+
+                if (resultado == true && filas2 > 0)
+                {
+                    Response.Write("<script>alert('Historial Clínico y Diagnóstico registrado exitosamente.')</script>");
+                    Response.Redirect("frmAtencionMedica.aspx");
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('Llenar campos vacíos.')</script>");
+            }
+        }
+        
+        private void CargarDatos()
+        {
+            if (Session["paciente"] != null && Session["cita"] != null)
+            {
+                entPaciente objPaciente = (entPaciente)Session["paciente"];
+                lblNombres.Text = objPaciente.nombres;
+                lblApellidos.Text = objPaciente.apPaterno + " " + objPaciente.apMaterno;
+                lblEdad.Text = objPaciente.edad.ToString() + " años";
+                lblSexo.Text = objPaciente.sexo.ToString();
+
+                entCita objCita = (entCita)Session["cita"];
+                txtObservaciones.Text = objCita.observacion;
+            }
+        }
+
+        private entPaciente GetPaciente(string apPaterno, string apMaterno)
+        {
+            GestionarPacienteServicio gestionarPacienteServicio = new GestionarPacienteServicio();
+            entPaciente objPaciente = gestionarPacienteServicio.BuscarPorApellidos(apPaterno, apMaterno);
+            return objPaciente;
+        }
+
+        private entDiagnostico GetDiagnostico(string diagnostico, entHistoriaClinica objHistoriaClinica)
+        {
+            entDiagnostico objDiagnostico = new entDiagnostico();
+            objDiagnostico.HistoriaClinica = objHistoriaClinica;
+            objDiagnostico.observacion = diagnostico;
+            return objDiagnostico;
+        }
+    }
+}

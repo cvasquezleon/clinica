@@ -1,0 +1,12 @@
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\bin\CapaPresentacion.dll.config
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\bin\CapaPresentacion.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\bin\CapaPresentacion.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\bin\CapaAplicacion.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\bin\CapaDominio.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\bin\CapaPersistencia.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\bin\CapaAplicacion.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\bin\CapaDominio.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\bin\CapaPersistencia.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\obj\Debug\CapaPresentacion.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\CALIDAD\T3\SisClinica\CapaPresentacion\obj\Debug\CapaPresentacion.pdb

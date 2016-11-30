@@ -1,0 +1,5 @@
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaDominio\bin\Release\CapaDominio.dll
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaDominio\bin\Release\CapaDominio.pdb
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaDominio\obj\Release\CapaDominio.csprojResolveAssemblyReference.cache
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaDominio\obj\Release\CapaDominio.dll
+C:\Users\CESAR\Documents\Visual Studio 2013\Projects\PROYECTOCALIDAD\SisClinica\CapaDominio\obj\Release\CapaDominio.pdb
